@@ -1,0 +1,254 @@
+[ 2016-06-11T13:59:59+08:00 ] ::1 /bulemobi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.023618s ]
+ERR: 无法加载模块:Bulemobi
+
+[ 2016-06-11T14:00:00+08:00 ] ::1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000904s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-06-11T14:02:10+08:00 ] ::1 /bulemobi/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+ERR: 无法加载模块:Bulemobi
+
+[ 2016-06-11T14:02:44+08:00 ] ::1 /bulemobi/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000967s ]
+ERR: 无法加载模块:Bulemobi
+
+[ 2016-06-11T14:10:33+08:00 ] ::1 /bulemobi/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+ERR: 无法加载模块:Bulemobi
+
+[ 2016-06-11T14:10:34+08:00 ] ::1 /bulemobi/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+ERR: 无法加载模块:Bulemobi
+
+[ 2016-06-11T14:10:57+08:00 ] ::1 /bulemobi/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+ERR: 无法加载模块:Bulemobi
+
+[ 2016-06-11T14:10:58+08:00 ] ::1 /bulemobi/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+ERR: 无法加载模块:Bulemobi
+
+[ 2016-06-11T14:15:00+08:00 ] ::1 /bluemobi/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000985s ]
+ERR: 无法加载模块:Index
+
+[ 2016-06-11T14:15:17+08:00 ] ::1 /bluemobi/index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+ERR: 无法加载模块:Index
+
+[ 2016-06-11T14:15:25+08:00 ] ::1 /bluemobi/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001093s ]
+ERR: 无法加载模块:Index
+
+[ 2016-06-11T14:15:59+08:00 ] ::1 /bluemobi/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001078s ]
+ERR: 无法加载模块:Index
+
+[ 2016-06-11T14:20:10+08:00 ] ::1 /bluemobi/user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:20:20+08:00 ] ::1 /bluemobi/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:20:24+08:00 ] ::1 /bluemobi/user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:25:43+08:00 ] ::1 /bluemobi/user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001907s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:25:44+08:00 ] ::1 /bluemobi/user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000833s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:26:47+08:00 ] ::1 /bluemobi/user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:26:48+08:00 ] ::1 /bluemobi/user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001003s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:27:24+08:00 ] ::1 /bluemobi/index.php/user/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:28:55+08:00 ] ::1 /bluemobi/index.php/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001137s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:32:52+08:00 ] ::1 /bluemobi/index.php/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:34:11+08:00 ] ::1 /bluemobi/index.php/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000182s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001854s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:34:12+08:00 ] ::1 /bluemobi/index.php/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000849s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:34:13+08:00 ] ::1 /bluemobi/index.php/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:34:53+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001068s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:34:55+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001270s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:34:59+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T14:49:29+08:00 ] ::1 /bluemobi/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:03:42+08:00 ] ::1 /bluemobi/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:03:43+08:00 ] ::1 /bluemobi/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:03:48+08:00 ] ::1 /bluemobi/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:03:55+08:00 ] ::1 /bluemobi/index.php/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000818s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:03:59+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:05:37+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:05:40+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:05:40+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:05:41+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+ERR: 无法加载模块:User
+
+[ 2016-06-11T15:06:09+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+
+[ 2016-06-11T15:06:35+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+NOTIC: [8] Use of undefined constant BIND_MODULE - assumed 'BIND_MODULE' D:\wamp\www\bluemobi\ThinkPHP\Library\Think\Dispatcher.class.php 第 141 行.
+
+[ 2016-06-11T15:07:15+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-06-11T15:08:35+08:00 ] ::1 /bluemobi/index.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-06-11T15:09:01+08:00 ] ::1 /bluemobi/index.php/Home/Controller/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+
