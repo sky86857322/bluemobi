@@ -1,3 +1,2 @@
-.idea
 ThinkPHP/Conf/
-/Application/Runtime/*
+Application/Runtime/*
