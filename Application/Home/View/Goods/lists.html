@@ -1,0 +1,106 @@
+
+
+<div class="content-box"><!-- Start Content Box -->
+
+	<div class="content-box-header">
+
+		<h3>商品列表</h3>
+		<div class="clear"></div>
+
+	</div> <!-- End .content-box-header -->
+
+	<div class="content-box-content">
+
+		<div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->
+
+			<div class="notification attention png_bg">
+
+			</div>
+
+			<table>
+
+				<thead>
+				<tr>
+					<th>ID</th>
+					<th>商品名</th>
+					<th>编号</th>
+					<th>分类</th>
+					<th>品牌</th>
+					<th>显示价格</th>
+					<th>实际价格</th>
+					<th>上架</th>
+					<th>过期日期</th>
+					<th>操作</th>
+				</tr>
+
+				</thead>
+
+				<tfoot>
+				<tr>
+					<td colspan="6">
+
+						<div class="pagination" id="page">
+							{$params['page']}
+						</div> <!-- End .pagination -->
+						<div class="clear"></div>
+					</td>
+				</tr>
+				</tfoot>
+
+				<tbody id="content">
+
+				</tbody>
+
+			</table>
+
+		</div> <!-- End #tab1 -->
+
+	</div> <!-- End .content-box-content -->
+
+</div> <!-- End .content-box -->
+<script>
+	$("#page a").live('click',function(){
+		var curPage = $(this).attr('page');
+		lists(curPage);
+
+		return false;//阻止页码跳转
+	});
+	var lists = function(curPage){
+		var sc = {'name':'sky'};
+		$.ajax({
+			type: "POST",
+			url: "__APP__/goods/search",
+			data:{
+				'curPage':curPage,
+				'sc':sc
+			},
+			dataType:"json",
+			success: function(json){
+				var l = '';
+				var result = json.result;//新闻列表
+				for(var i =0;i<result.length;i++){
+					l+='<tr>';
+					l+='	<td>'+result[i].id+'</td>';
+					l+='	<td><a href="'+baseUrl+'" title="title">'+result[i].name+'</a></td>';
+					l+='	<td>'+result[i].code+'</td>';
+					l+='	<td>'+result[i].o_price+'</td>';
+					l+='	<td>'+result[i].brand.name+'</td>';
+					l+='	<td>'+result[i].o_price+'</td>';
+					l+='	<td>'+result[i].t_price+'</td>';
+					l+='	<td>'+result[i].is_up+'</td>';
+					l+='	<td>'+result[i].overdate+'</td>';
+					l+='	<td>';
+					l+='		 <a href="'+baseUrl+'" title="Edit"><img src="resources/images/icons/pencil.png" alt="修改" /></a>';
+					l+='		 <a href="'+baseUrl+'" title="Delete"><img src="resources/images/icons/cross.png" alt="规格" /></a> ';
+					l+='	</td>';
+					l+='</tr>';
+				}
+				$('#content').html(l);
+				$('#page').html(json.page);
+			}
+		});
+	};
+	lists(1);
+</script>
+
+

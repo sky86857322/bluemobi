@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base href="__PUBLIC__/" /><!--设置根目录，当你的连接前面没有加上"/"，那么会自动把base中的herf的值加上-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+
+    <title>网站后台管理系统</title>
+
+    <!-- Reset Stylesheet -->
+    <link rel="stylesheet" href="resources/css/reset.css" type="text/css" media="screen" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen" />
+
+    <!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+    <link rel="stylesheet" href="resources/css/invalid.css" type="text/css" media="screen" />
+
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" href="resources/css/ie.css" type="text/css" media="screen" />
+    <![endif]-->
+
+    <script type="text/javascript" src="resources/scripts/jquery-1.8.3.min.js"></script>
+
+	<script>
+		//全局：基本路径
+		var baseUrl = "__APP__/";
+	</script>
+
+</head>
+
+<body><div id="body-wrapper"> <!-- Wrapper for the radial gradient background -->
+
+    <div id="sidebar"><div id="sidebar-wrapper"> <!-- Sidebar with logo and menu -->
+
+        <h1 id="sidebar-title"><a href="#">后台管理系统</a></h1>
+
+        <!-- Logo (221px wide) -->
+        <a href="#"><img id="logo" src="resources/images/logo.png" alt="Simpla Admin logo" /></a>
+
+        <!-- Sidebar Profile links -->
+        <div id="profile-links">
+            您好, <a href="#" title="Edit your profile">{$username}</a><br />
+            <br />
+            <a href="__APP__/admin/logout" title="退出">退出</a>
+        </div>
+
+        <ul id="main-nav">  <!-- Accordion Menu -->
+            <li>
+                <a href="#" class="nav-top-item <php>if($module == 'goods') echo 'current';</php>">
+                    商品
+                </a>
+                <ul>
+                    <li><a href="__APP__/goods/lists" <php>if($module == 'goods' && $action == 'lists') echo 'class="current"';</php>>列表</a></li>
+					<li><a href="__APP__/goods/add" <php>if($module == 'goods' && $action == 'add') echo 'class="current"';</php>>添加</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="nav-top-item <php>if($module == 'orders') echo 'current';</php>">
+                    订单
+                </a>
+                <ul>
+                    <li><a href="__APP__/orders/lists" <php>if($module == 'orders' && $action == 'lists') echo 'class="current"';</php>>列表</a></li>
+					<li><a href="__APP__/orders/add" <php>if($module == 'orders' && $action == 'add') echo 'class="current"';</php>>添加</a></li>
+                </ul>
+            </li>
+        </ul> <!-- End #main-nav -->
+
+
+    </div></div> <!-- End #sidebar -->
+
+    <div id="main-content"> <!-- Main Content Section with everything -->
+
+
+        <!-- Page Head -->
+
+        <div class="clear"></div> <!-- End .clear -->

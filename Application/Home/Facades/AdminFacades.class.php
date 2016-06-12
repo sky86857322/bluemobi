@@ -2,7 +2,7 @@
 namespace Home\Facades;
 use Home\Model\AdminModel;
 
-class AdminFacades extends Facades {
+class AdminFacades extends BaseFacades {
 	public $model;
 	public function __construct(){
 		$this->model = new AdminModel();

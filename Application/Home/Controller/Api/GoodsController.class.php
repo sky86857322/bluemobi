@@ -1,23 +1,25 @@
 <?php
 namespace Home\Controller;
+use Think\Controller;
 use Home\Facades\AdminFacades;
 
-class AdminController extends BaseController {
+class GoodsController extends Controller {
     /**
-     * @action admin/login
+     * @action goods/search
      * @param
-     *      username    用户名
+     *      sc    		搜索条件
      *      password    密码
      */
-    public function login(){
+    public function search(){
+		//$_POST['username'] = 'sky';
+		//$_POST['password'] = '123123';
 		$facades = new AdminFacades();
 		if(!empty($_POST['username']) && !empty($_POST['password'])){
 			$facades->login($_POST['username'],$_POST['password']);
-			$this->redirect('goods/lists');
 		}
 		else{
 			if($facades->checkLogin()){
-				$this->redirect('goods/lists');
+
 			}
 			else{
 				$this->display();
@@ -32,7 +34,6 @@ class AdminController extends BaseController {
 	public function logout(){
 		$facades = new AdminFacades();
 		$facades->logout();
-		$this->redirect('admin/login');
 	}
 
 	/**

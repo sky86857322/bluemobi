@@ -159,6 +159,7 @@ class RelationModel extends Model {
                                     $mappingFk   =   !empty($val['foreign_key'])?$val['foreign_key']:strtolower($model->getModelName()).'_id';     //  关联外键
                                 }
                                 $fk   =  $result[$mappingFk];
+								//var_dump($model);
                                 $mappingCondition .= " AND {$model->getPk()}='{$fk}'";
                                 $relationData   =  $model->where($mappingCondition)->field($mappingFields)->find();
                                 if (!empty($val['relation_deep'])){
