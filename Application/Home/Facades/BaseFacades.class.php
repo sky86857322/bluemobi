@@ -1,5 +1,6 @@
 <?php
 namespace Home\Facades;
+use Home\Common\SysSetting;
 
 class BaseFacades {
 	/**
@@ -47,6 +48,12 @@ class BaseFacades {
 		return $result;
 	}
 
+	/**
+	 * 获取页码
+	 * @param $pageParams
+	 *
+	 * @return string
+	 */
 	private function _getPage($pageParams){
 		$floorPage = floor($pageParams['pageNum']/2);
 		$startPage = $pageParams['curPage'] - $floorPage;
@@ -90,5 +97,17 @@ class BaseFacades {
 			$page.='<a href="javascript:void(0)" title="尾页" page="'.$totalPage.'">'.$totalPage.'</a>';//总页数就是尾页的页码
 		}
 		return $page;
+	}
+
+	protected function applyForCreate(&$attribute){
+		$admin = session('admin');
+		$attribute['created_by'] = $admin['id'];
+		$attribute['created_at'] = date('Y-m-d H:i:s');
+	}
+
+	protected function applyForUpdate(&$attribute){
+		$admin = session('admin');
+		$attribute['updated_by'] = $admin['id'];
+		$attribute['updated_at'] = date('Y-m-d H:i:s');
 	}
 }

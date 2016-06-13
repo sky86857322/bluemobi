@@ -1,0 +1,128 @@
+
+
+<div class="content-box"><!-- Start Content Box -->
+
+	<div class="content-box-header">
+
+		<h3>商品详情</h3>
+
+
+		<div class="clear"></div>
+
+	</div> <!-- End .content-box-header -->
+
+	<div class="content-box-content">
+
+		<div class="tab-content" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->
+
+		</div> <!-- End #tab1 -->
+
+		<div class="tab-content default-tab" id="tab2">
+
+			<form action="" method="post">
+
+				<fieldset> <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+					<input type="hidden" id="id" name="id" value="{$params['id']}"/>
+					<p>
+						<label>商品名</label>
+						<input class="text-input small-input" type="text" id="goodsName" name="goodsName" />
+						<br />
+					</p>
+					<p>
+						<label>编号</label>
+						<input class="text-input small-input" type="text" id="code" name="code" />
+						<br />
+					</p>
+					<p>
+						<label>描述</label>
+						<textarea class="text-input textarea wysiwyg" id="resume" name="resume" cols="75" rows="15"></textarea>
+					</p>
+					<p>
+						<label>分类</label>
+						<select name="goodsType" class="small-input" id="goodsType">
+							<php>foreach($params['goodsType'] as $t):</php>
+							<option value="<php>echo $t['id']</php>"><php>echo $t['name']</php></option>
+							<php>endforeach;</php>
+						</select>
+					</p>
+					<p>
+						<label>显示价格</label>
+						<input class="text-input small-input" type="text" id="o_price" name="o_price" />
+						<br />
+					</p>
+					<p>
+						<label>实际价格</label>
+						<input class="text-input small-input" type="text" id="t_price" name="o_price" />
+						<br />
+					</p>
+					<p>
+						<label>上架</label>
+						<input type="radio" name="is_up" /> 是
+						<input type="radio" name="is_up" /> 否
+					</p>
+					<p>
+						<label>下架日期</label>
+						<input class="text-input small-input datepicker" type="text" id="overdate" name="overdate" />
+						<br />
+					</p>
+					<!--
+
+					<p>
+						<label>Checkboxes</label>
+						<input type="checkbox" name="checkbox1" /> This is a checkbox <input type="checkbox" name="checkbox2" /> And this is another checkbox
+					</p>
+
+
+					<p>
+						<label>This is a drop down list</label>
+						<select name="dropdown" class="small-input">
+							<option value="option1">Option 1</option>
+							<option value="option2">Option 2</option>
+							<option value="option3">Option 3</option>
+							<option value="option4">Option 4</option>
+						</select>
+					</p>
+
+					-->
+
+					<p>
+						<label>封面图</label>
+						<input class="text-input small-input" type="file" id="img" name="img" />
+						<br />
+					</p>
+					<p>
+						<input class="button" type="submit" value="Submit" />
+					</p>
+
+				</fieldset>
+
+				<div class="clear"></div><!-- End .clear -->
+
+			</form>
+
+		</div> <!-- End #tab2 -->
+
+	</div> <!-- End .content-box-content -->
+
+</div> <!-- End .content-box -->
+
+<script>
+	var view = function(){
+		var id = $("#id").attr("value");
+		$.ajax({
+			type: "GET",
+			url: "__APP__/goods/detail/id/"+id,
+			dataType:"json",
+			success: function(json){
+				var result = json.result;//新闻列表
+				$("#goodsName").attr("value",result.name);
+				$("#resume").append(result.resume);
+				$("#code").attr("value",result.code);
+				$("#o_price").attr("value",result.o_price);
+				$("#t_price").attr("value",result.t_price);
+			}
+		});
+	};
+	view();
+</script>
+

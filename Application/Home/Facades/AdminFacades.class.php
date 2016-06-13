@@ -43,7 +43,7 @@ class AdminFacades extends BaseFacades {
 	 * @param $password
 	 * @return bool
 	 */
-	public function createOne($username,$password,$cPassword){
+	public function create($username,$password,$cPassword){
 		if($password != $cPassword){
 			return ['return'=>false,'message'=>'两次输入密码不一致'];
 		}

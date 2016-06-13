@@ -29,7 +29,7 @@
 					<th>显示价格</th>
 					<th>实际价格</th>
 					<th>上架</th>
-					<th>过期日期</th>
+					<th>下架日期</th>
 					<th>操作</th>
 				</tr>
 
@@ -77,11 +77,11 @@
 			dataType:"json",
 			success: function(json){
 				var l = '';
-				var result = json.result;//新闻列表
+				var result = json.result;
 				for(var i =0;i<result.length;i++){
 					l+='<tr>';
 					l+='	<td>'+result[i].id+'</td>';
-					l+='	<td><a href="'+baseUrl+'" title="title">'+result[i].name+'</a></td>';
+					l+='	<td><a href="'+baseUrl+'/goods/view/id/'+result[i].id+'" title="title">'+result[i].name+'</a></td>';
 					l+='	<td>'+result[i].code+'</td>';
 					l+='	<td>'+result[i].o_price+'</td>';
 					l+='	<td>'+result[i].brand.name+'</td>';

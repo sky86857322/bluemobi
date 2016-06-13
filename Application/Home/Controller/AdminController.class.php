@@ -12,8 +12,13 @@ class AdminController extends BaseController {
     public function login(){
 		$facades = new AdminFacades();
 		if(!empty($_POST['username']) && !empty($_POST['password'])){
-			$facades->login($_POST['username'],$_POST['password']);
-			$this->redirect('goods/lists');
+			$res = $facades->login($_POST['username'],$_POST['password']);
+			if($res){
+				$this->redirect('goods/lists');
+			}
+			else{
+				$this->display();
+			}
 		}
 		else{
 			if($facades->checkLogin()){
@@ -47,7 +52,7 @@ class AdminController extends BaseController {
 		$_POST['password'] = '123123';
 		$_POST['cPassword'] = '123123';
 		$facades = new AdminFacades();
-		$res = $facades->createOne($_POST['username'],$_POST['password'],$_POST['cPassword']);
+		$res = $facades->create($_POST['username'],$_POST['password'],$_POST['cPassword']);
 
 	}
 }

@@ -9,7 +9,7 @@ class GoodsModel extends RelationModel {
 			'GoodsType'=>[
 					'mapping_type'  => self::BELONGS_TO,
 					'class_name'    => 'GoodsType',
-					'foreign_key'   => 'type_code',
+					'foreign_key'   => 'type_id',
 					'mapping_name'  => 'type',
 					'mapping_fields'=>['name','info'],
 			],
@@ -47,16 +47,26 @@ class GoodsModel extends RelationModel {
 		return [$itemCount,$result];
     }
 
-
-	public function createOne(){
+	/**
+	 * 获取商品
+	 * @param $id
+	 *
+	 * @return mixed
+	 */
+	public function getById($id){
 		$model = D("Goods");
-		$res = $model->field(['id','username'])->where(['username'=>$username])->find();
-		if(!empty($res)){
-			return ['return'=>false,'message'=>'已有重复用户'];
-		}
-		$model->username = $username;
-		$model->password = $password;
-		$model->add();
-		return ['return'=>true,'message'=>''];
+		return  $model->relation(true)->where(['id'=>$id])->find();
+	}
+
+	/**
+	 * 创建
+	 * @param $attribute
+	 *
+	 * @return int
+	 */
+	public function createOne($attribute){
+		$model = D("Goods");
+		$id = $model->add($attribute);
+		return $id;
 	}
 }

@@ -263,7 +263,7 @@ class Model {
                 }    
             }else{
                 $fields =   $this->fields;
-            }        
+            }
             foreach ($data as $key=>$val){
                 if(!in_array($key,$fields,true)){
                     if(!empty($this->options['strict'])){

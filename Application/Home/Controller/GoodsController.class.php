@@ -5,10 +5,27 @@ use Home\Facades\GoodsFacades;
 class GoodsController extends BaseController {
 
 	/**
+	 * 列表
 	 * @action goods/lists
 	 */
 	public function lists(){
-		$this->view("goods","lists");
+		$this->render("goods","lists");
+	}
+
+	/**
+	 * 详情
+	 * @action goods/view/id/1	id为主键ID
+	 */
+	public function view($id){
+		$facades = new GoodsFacades();
+		$goodsType = $facades->getAllType();
+		$this->render("goods","",['id'=>$id,'goodsType'=>$goodsType]);
+	}
+
+	public function add(){
+		$facades = new GoodsFacades();
+		$goodsType = $facades->getAllType();
+		$this->render("goods","",['goodsType'=>$goodsType]);
 	}
 
     /**
@@ -30,18 +47,32 @@ class GoodsController extends BaseController {
     }
 
 	/**
+	 * 详情
+	 * @action goods/detail/id/1	id为主键ID
+	 */
+	public function detail($id){
+		$facades = new GoodsFacades();
+		$res = $facades->getById($id);
+		$result = [
+				'result'=>$res,
+		];
+		$this->jsonEcho($result);
+	}
+
+	/**
 	 * @action admin/create
 	 * @param
-	 *      username    用户名
-	 *      password    密码
-	 * 		cPassword    密码
+	 *      name    	商品名
+	 *      type_id    	类别ID
 	 */
 	public function create(){
-		$_POST['username'] = 'sky';
-		$_POST['password'] = '123123';
-		$_POST['cPassword'] = '123123';
-		$facades = new AdminFacades();
-		$res = $facades->createOne($_POST['username'],$_POST['password'],$_POST['cPassword']);
+		if(empty($_POST['name']) || empty($_POST['type_id'])){
+			$this->jsonEcho(['return'=>false,'message'=>'','extra'=>[]]);
+			return;
+		}
+		$facades = new GoodsFacades();
+		$id = $facades->create($_POST);
+		$this->jsonEcho(['return'=>true,'message'=>'','extra'=>['id'=>$id]]);
 
 	}
 }

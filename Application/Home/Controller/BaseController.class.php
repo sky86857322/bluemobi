@@ -17,7 +17,13 @@ class BaseController extends Controller {
 		echo json_encode($arr);
 	}
 
-	protected function view($module,$action,$params = []){
+	/**
+	 * 输出视图
+	 * @param $module
+	 * @param $action
+	 * @param array $params
+	 */
+	protected function render($module,$action,$params = []){
 		$admin = session('admin');
 		$arr = [
 			'module'=>$module,
