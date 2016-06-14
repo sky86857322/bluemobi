@@ -19,7 +19,8 @@ class GoodsController extends BaseController {
 	public function view($id){
 		$facades = new GoodsFacades();
 		$goodsType = $facades->getAllType();
-		$this->render("goods","",['id'=>$id,'goodsType'=>$goodsType]);
+		$res = $facades->getById($id);
+		$this->render("goods","",['id'=>$id,'goodsType'=>$goodsType,'goods'=>$res]);
 	}
 
 	public function add(){
@@ -73,6 +74,27 @@ class GoodsController extends BaseController {
 		$facades = new GoodsFacades();
 		$id = $facades->create($_POST);
 		$this->jsonEcho(['return'=>true,'message'=>'','extra'=>['id'=>$id]]);
+
+	}
+
+	/**
+	 * 修改
+	 * @action admin/update
+	 * @param
+	 * 		id		商品ID
+	 * 		key		字段名
+	 * 		value	值
+	 */
+	public function update(){
+		$id = $_POST['id'];
+		$attribute = [$_POST['key']=>$_POST['value']];
+		$facades = new GoodsFacades();
+		$facades->update($id,$attribute);
+		$res = $facades->getById($id);
+		$result = [
+				'result'=>$res,
+		];
+		$this->jsonEcho(['return'=>true,'message'=>'','extra'=>[$result]]);
 
 	}
 }

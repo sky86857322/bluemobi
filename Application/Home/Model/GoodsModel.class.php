@@ -69,4 +69,18 @@ class GoodsModel extends RelationModel {
 		$id = $model->add($attribute);
 		return $id;
 	}
+
+	/**
+	 * 修改
+	 * @param $id
+	 * @param $attribute
+	 *
+	 * @return bool
+	 */
+	public function updateById($id,$attribute){
+		$model = D("Goods");
+		$attribute['id'] = $id;
+		$id = $model->save($attribute);
+		return $id;
+	}
 }

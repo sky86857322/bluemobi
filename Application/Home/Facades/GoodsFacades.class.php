@@ -56,6 +56,21 @@ class GoodsFacades extends BaseFacades {
 	}
 
 	/**
+	 * @param $id
+	 * @param $attribute
+	 *
+	 */
+	public function update($id,$attribute){
+		$goodsType = new GoodsTypeModel();
+		if(!empty($attribute['type_id'])){
+			$type = $goodsType->getById($attribute['type_id']);
+			$attribute['type_code'] = $type['code'];
+		}
+		$this->applyForUpdate($attribute);
+		$this->model->updateById($id,$attribute);
+	}
+
+	/**
 	 * 获取所有商品类别
 	 * @return array|mixed
 	 */
