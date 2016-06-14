@@ -18,8 +18,22 @@ class GoodsFacades extends BaseFacades {
 	 * @param string $sort
 	 */
     public function search($sc = [],$curPage = 1,$pageSize = 20,$order = "",$sort = "desc"){
+		$cArr = [];
+		$con = "";
 		list($curPage,$pageSize,$order) = $this->setPage($curPage,$pageSize,$order,$sort);
-		list($itemCount,$res) = $this->model->search($sc,$curPage,$pageSize,$order);
+		if(!empty($sc['name'])){
+			$cArr[] = "name like '%{$sc['name']}%'";
+		}
+		if(!empty($sc['type_id'])){
+			$cArr[] = "type_id = '{$sc['type_id']}'";
+		}
+		if(!empty($cArr)){
+			foreach($cArr as $c){
+				$con .= $c." and ";
+			}
+			$con = substr($con,0,-4);
+		}
+		list($itemCount,$res) = $this->model->search($con,$curPage,$pageSize,$order);
 		$pageParams = [
 				'curPage'=>$curPage,
 				'pageSize'=>$pageSize,

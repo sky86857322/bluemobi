@@ -24,18 +24,18 @@ class GoodsModel extends RelationModel {
 
 	/**
 	 * 搜索
-	 * @param $sc
+	 * @param $c
 	 * @param $skip
 	 * @param $pageSize
 	 * @param $order
 	 *
 	 * @return array
 	 */
-    public function search($sc,$curPage,$pageSize,$order){
+    public function search($c,$curPage,$pageSize,$order){
 		$result = [];
 		$itemCount = 0;
 		$model = D("Goods");
-		$res = $model->relation(true)->where($sc)->order($order)->page("{$curPage},{$pageSize}")->select();
+		$res = $model->relation(true)->where($c)->order($order)->page("{$curPage},{$pageSize}")->select();
 		//var_dump($model);exit;
 		if(!empty($res)){
 			$itemCount = $model->where($sc)->count("id");
