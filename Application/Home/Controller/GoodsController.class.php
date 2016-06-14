@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Home\Facades\GoodsFacades;
 
 class GoodsController extends BaseController {
+	public $checkAction = ['lists','view','add','search','detail','create','update','delete'];
 
 	/**
 	 * 列表
@@ -39,7 +40,7 @@ class GoodsController extends BaseController {
      */
     public function search(){
 		//$_POST['curPage'] = 1;
-		//$_POST['password'] = '123123';
+		//$_POST['sc'] = ['name'=>'sky'];
 		$curPage = $_POST['curPage'];
 		$sc = [];
 		$facades = new GoodsFacades();
@@ -96,5 +97,16 @@ class GoodsController extends BaseController {
 		];
 		$this->jsonEcho(['return'=>true,'message'=>'','extra'=>[$result]]);
 
+	}
+
+	/**
+	 * 删除
+	 * @action goods/delete
+	 */
+	public function delete(){
+		$id = $_POST['id'];
+		$facades = new GoodsFacades();
+		 $facades->delete($id);
+		$this->jsonEcho(['return'=>true,'message'=>'']);
 	}
 }

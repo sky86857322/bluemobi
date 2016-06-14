@@ -3,6 +3,8 @@ namespace Home\Controller;
 use Home\Facades\AdminFacades;
 
 class AdminController extends BaseController {
+	public $checkAction = ['create'];
+
     /**
      * @action admin/login
      * @param
@@ -10,8 +12,8 @@ class AdminController extends BaseController {
      *      password    密码
      */
     public function login(){
-		$facades = new AdminFacades();
 		if(!empty($_POST['username']) && !empty($_POST['password'])){
+			$facades = new AdminFacades();
 			$res = $facades->login($_POST['username'],$_POST['password']);
 			if($res){
 				$this->redirect('goods/lists');
@@ -21,7 +23,7 @@ class AdminController extends BaseController {
 			}
 		}
 		else{
-			if($facades->checkLogin()){
+			if(AdminFacades::checkLogin()){
 				$this->redirect('goods/lists');
 			}
 			else{

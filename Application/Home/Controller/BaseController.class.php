@@ -4,9 +4,15 @@ use Think\Controller;
 use Home\Facades\AdminFacades;
 
 class BaseController extends Controller {
+	public $checkAction = [];
 	public function __construct()
 	{
 		parent::__construct();
+		$u = U();
+		$action = substr($u,strripos($u,"/") + 1,-5);
+		if(in_array($action,$this->checkAction) && !AdminFacades::checkLogin()){
+			$this->redirect("admin/login");
+		}
 	}
 
 	/**

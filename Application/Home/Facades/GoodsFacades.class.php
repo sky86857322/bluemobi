@@ -85,6 +85,13 @@ class GoodsFacades extends BaseFacades {
 	}
 
 	/**
+	 * @param $id
+	 */
+	public function delete($id){
+		$this->model->deleteById($id);
+	}
+
+	/**
 	 * 获取所有商品类别
 	 * @return array|mixed
 	 */

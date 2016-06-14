@@ -83,4 +83,14 @@ class GoodsModel extends RelationModel {
 		$id = $model->save($attribute);
 		return $id;
 	}
+
+	/**
+	 * 删除
+	 * @param $id
+	 *
+	 */
+	public function deleteById($id){
+		$model = D("Goods");
+		$model->where(['id'=>$id])->delete();
+	}
 }

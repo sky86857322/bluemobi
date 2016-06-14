@@ -22,7 +22,7 @@ class AdminFacades extends BaseFacades {
 	/**
 	 * 验证登录
 	 */
-	public function checkLogin(){
+	public static function checkLogin(){
 		$admin = session('admin');
 		if(empty($admin)){
 			return false;
@@ -35,6 +35,22 @@ class AdminFacades extends BaseFacades {
 	 */
 	public function logout(){
 		session('admin',null);
+	}
+
+	/**
+	 * 验证权限
+	 * @param $right
+	 */
+	public static function checkUserRight($right){
+		$admin = session('admin');
+		$userRight = $admin['rights'];
+		if(in_array('admin',$userRight)){
+			return true;
+		}
+		if(in_array($right,$userRight)){
+			return true;
+		}
+		return false;
 	}
 
 	/**
